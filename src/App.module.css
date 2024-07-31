@@ -1,0 +1,26 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #DCE9E2;
+}
+
+.wrapper_main_content{
+    min-width: calc(100% - 345px);
+}
+
+@media (max-width: 1050px) {
+    .wrapper_main_content{
+        width: 100%;
+        min-width: none;
+        min-height: 1400px;
+    }
+}

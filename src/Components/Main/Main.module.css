@@ -1,0 +1,88 @@
+.main_content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    margin-top: 83px;
+}
+
+.info_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+}
+
+.header{
+    font-size: 52px;
+    font-family: var(--dm-sans700);
+    margin-top: 16px;
+}
+
+.info_text{
+    font-size: 18px;
+    font-weight: normal;
+    color: 
+    #495057;
+    margin-top: 24px;
+}
+
+.button_consult{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 263px;
+    height: 52px;
+    background-color: var(--green);
+    color: white;
+    font-size: 14px;
+    font-family: var(--dm-sans700);
+    border: none;
+    border-radius: 40px;
+    margin-top: 32px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.button_consult img{
+    margin-right: 16px;
+}
+
+@media (max-width: 1050px) {
+    .main_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 30%;
+    }
+
+    .info_content{
+        align-items: center;
+    }
+
+    .main_image{
+       min-width: 50%;
+        resize: none;
+        margin-top: 61px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header{
+        font-size: 34px;
+    }
+
+    .info_content{
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .main_image{
+        width: 80%;
+     }
+}

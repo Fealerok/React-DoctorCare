@@ -1,0 +1,6 @@
+.header_text{
+    font-size: 14px;
+    font-family: var(--dm-sans700);
+    color: var(--green);
+    margin-bottom: 16px;
+}

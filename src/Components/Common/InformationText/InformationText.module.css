@@ -1,0 +1,7 @@
+.information_text{
+    font-size: 16px;
+    font-family: var(--dm-sans400);
+    list-style: 24px;
+    color: #495057;
+    text-wrap: wrap;
+}
