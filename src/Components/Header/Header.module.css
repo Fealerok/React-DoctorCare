@@ -125,6 +125,7 @@ span{
 
 .headerHidden{
     display: none !important;
+    transition: 0.2s;
 }
 
 .mobile_header_button_container{
@@ -184,6 +185,8 @@ span{
 }
 
 .header_content_mobile{
+    animation-name: showFixedHeader;
+    animation-duration: 0.2s;
     position: fixed;
     top: 0;
     right: 0;
@@ -192,6 +195,7 @@ span{
     width: 100%;
     background-color: var(--green);
     z-index: 1000;
+
 
 }
 

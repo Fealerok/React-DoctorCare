@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "../Header.module.css";
 
 function HeaderMobile({isFixedHeader, windowY, getClickedButton}){
 
+    const openedFixedHeader = useRef(null);
     const[isHeaderOpened, setHeaderOpen] = useState(false);
 
     function clickOpenHeaderHandle(){
@@ -18,6 +19,10 @@ function HeaderMobile({isFixedHeader, windowY, getClickedButton}){
         event.target.classList.add(`${styles.active_button}`);
 
         getClickedButton(event.target);
+
+        if (openedFixedHeader.current.classList.contains(styles.headerOpened)){
+            openedFixedHeader.current.classList.replace(styles.headerOpened, styles.headerHidden);
+        }
     }
 
     return (
@@ -31,7 +36,7 @@ function HeaderMobile({isFixedHeader, windowY, getClickedButton}){
                         <div className={styles.container_line}></div>
                         <div className={styles.container_line}></div>
                     </div>
-                    <div className={`${styles.header_content_mobile} ${isHeaderOpened ? `${styles.headerOpened}` : `${styles.headerHidden}`}`}>
+                    <div className={`${styles.header_content_mobile} ${isHeaderOpened ? `${styles.headerOpened}` : `${styles.headerHidden}`}`} ref={openedFixedHeader}>
                         <div className={styles.header_mobile_opened_menu}>
                             <h2 className={`${styles.header_opened}`}>Doctor<span className={`${styles.header_opened}`}>Care</span></h2>
                             <div className={styles.header_mobile_close_button_container} onClick={clickOpenHeaderHandle}>
